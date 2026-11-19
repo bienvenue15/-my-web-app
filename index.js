@@ -29,6 +29,9 @@ const server = http.createServer((req, res) => {
         res.end('Invalid username or password\n');
       }
     });
+  } else if (req.url === '/about') {
+    res.statusCode = 200;
+    res.end('About Page\n');
   } else {
     res.statusCode = 200;
     res.end('Hello, this is a basic web app!\n');
